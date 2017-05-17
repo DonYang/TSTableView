@@ -40,59 +40,26 @@
     self.settingsView.layer.shadowOffset = CGSizeMake(2, 4);
     
     // Top table
-    _tableView1 = [[TSTableView alloc] initWithFrame:CGRectMake(20, 80, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
+    _tableView1 = [[TSTableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height)];
     _tableView1.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView1.delegate = self;
     [self.view addSubview:_tableView1];
     
     _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:kTSTableViewStyleDark];
-//    NSArray *columns1 = [self columnsInfo1];
-//    NSArray *rows1 = [self rowsInfo1];
-//    [_model1 setColumnsInfo:columns1 andRowsInfo:rows1];
-    
-    NSArray *columns1 = [self columnsForFileSystemTree];
-    NSArray *rows1 = [self rowsForAppDirectory];
+    NSArray *columns1 = [self columnsInfo1];
+    NSArray *rows1 = [self rowsInfo1];
     [_model1 setColumns:columns1 andRows:rows1];
     
-    // Bottom table
-   
-    
-    _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
-    _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _tableView2.delegate = self;
-    
-    [self.view addSubview:_tableView2];
-    
-    _model2 = [[TSTableViewModel alloc] initWithTableView:_tableView2 andStyle:kTSTableViewStyleLight];
-    
-//    NSArray *columns2 = [self columnsInfo2];
-//    NSArray *rows2 = [self rowsInfo2];
-//    [_model2 setColumnsInfo:columns2 andRowsInfo:rows2];
-    
-    NSArray *columns2 = [self columnsForFileSystemTree];
-    NSArray *rows2 = [self rowsForAppDirectory];
-    [_model2 setColumns:columns2 andRows:rows2];
-    
-    _dataModels = @[_model1, _model2];
-    _tables = @[_tableView1, _tableView2];
-    
-    // Row examples should correspond to columnsInfo* and rowsInfo* used above
-//    _rowExamples = @[
-//                     [self rowExample1],
-//                     [self rowExample2],
-//                     ];
+//    NSArray *columns1 = [self columnsForFileSystemTree];
+//    NSArray *rows1 = [self rowsForAppDirectory];
+//    [_model1 setColumns:columns1 andRows:rows1];
     
     _rowExamples = @[
-                     [self rowForDummyFile],
-                     [self rowForDummyFile],
+                     [self rowExample1],
+                     [self rowExample2],
+                     //[self rowForDummyFile],
                      ];
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - 

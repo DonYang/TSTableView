@@ -28,8 +28,6 @@
 		F6141FC317C6A76F003455EB /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141FA717C6A76F003455EB /* TSTableViewHeaderSectionView.m */; };
 		F6141FC417C6A76F003455EB /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141FA917C6A76F003455EB /* TSTableViewModel.m */; };
 		F6141FD217C6A80F003455EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6141FCA17C6A80E003455EB /* InfoPlist.strings */; };
-		F6141FD317C6A80F003455EB /* TSTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6141FCC17C6A80E003455EB /* TSTableViewController.xib */; };
-		F6141FD417C6A80F003455EB /* TSTableViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6141FCE17C6A80E003455EB /* TSTableViewController~ipad.xib */; };
 		F6141FD517C6A80F003455EB /* TSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141FD117C6A80E003455EB /* TSTableViewController.m */; };
 		F657419117CD891400826563 /* TSTableViewController+TestDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F657419017CD891400826563 /* TSTableViewController+TestDataDefinition.m */; };
 		F657420717CD893B00826563 /* TableViewFileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F65741CC17CD893B00826563 /* TableViewFileIcon.png */; };
@@ -81,8 +79,6 @@
 		F6141FA817C6A76F003455EB /* TSTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewModel.h; sourceTree = "<group>"; };
 		F6141FA917C6A76F003455EB /* TSTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewModel.m; sourceTree = "<group>"; };
 		F6141FCB17C6A80E003455EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		F6141FCD17C6A80E003455EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = TSTableViewController.xib; sourceTree = "<group>"; };
-		F6141FCF17C6A80E003455EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSTableViewController~ipad.xib"; sourceTree = "<group>"; };
 		F6141FD017C6A80E003455EB /* TSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewController.h; sourceTree = "<group>"; };
 		F6141FD117C6A80E003455EB /* TSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewController.m; sourceTree = "<group>"; };
 		F657418F17CD891400826563 /* TSTableViewController+TestDataDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSTableViewController+TestDataDefinition.h"; sourceTree = "<group>"; };
@@ -229,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				F6141FCA17C6A80E003455EB /* InfoPlist.strings */,
-				F6141FCC17C6A80E003455EB /* TSTableViewController.xib */,
-				F6141FCE17C6A80E003455EB /* TSTableViewController~ipad.xib */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
@@ -343,8 +337,6 @@
 				F6141F7A17C6A725003455EB /* Default@2x.png in Resources */,
 				F6141F7C17C6A725003455EB /* Default-568h@2x.png in Resources */,
 				F6141FD217C6A80F003455EB /* InfoPlist.strings in Resources */,
-				F6141FD317C6A80F003455EB /* TSTableViewController.xib in Resources */,
-				F6141FD417C6A80F003455EB /* TSTableViewController~ipad.xib in Resources */,
 				F657420717CD893B00826563 /* TableViewFileIcon.png in Resources */,
 				F657420817CD893B00826563 /* TableViewFolderIcon.png in Resources */,
 				F657420917CD893B00826563 /* TableViewPackageIcon.png in Resources */,
@@ -396,22 +388,6 @@
 				F6141FCB17C6A80E003455EB /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F6141FCC17C6A80E003455EB /* TSTableViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6141FCD17C6A80E003455EB /* en */,
-			);
-			name = TSTableViewController.xib;
-			sourceTree = "<group>";
-		};
-		F6141FCE17C6A80E003455EB /* TSTableViewController~ipad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6141FCF17C6A80E003455EB /* en */,
-			);
-			name = "TSTableViewController~ipad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
