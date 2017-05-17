@@ -1,0 +1,5 @@
+source 'https://github.com/DonYang/Specs.git'
+
+target 'TSTableView' do
+  pod "TSTableView", :path => "../"
+end

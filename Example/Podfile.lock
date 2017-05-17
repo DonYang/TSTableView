@@ -1,0 +1,16 @@
+PODS:
+  - TSTableView (0.1.0)
+
+DEPENDENCIES:
+  - TSTableView (from `../`)
+
+EXTERNAL SOURCES:
+  TSTableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TSTableView: 2df92eaeb3e8305b1614c0228f0d04ff7afa0f8e
+
+PODFILE CHECKSUM: 51cfb22ab370ba747909713cc7c771df73258da8
+
+COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027BCFE2E818BF3B4184EAEE /* libPods-TSTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8872CD38E8937ACDDBD6AD /* libPods-TSTableView.a */; };
 		F6871C441ECC329C003928D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6871C431ECC329C003928D9 /* main.m */; };
 		F6871C471ECC329C003928D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6871C461ECC329C003928D9 /* AppDelegate.m */; };
 		F6871C4A1ECC329C003928D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6871C491ECC329C003928D9 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D7FF4E3EC499E7B811605D9 /* Pods-TSTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TSTableView/Pods-TSTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		763E37928D4E3E0D96C281F6 /* Pods-TSTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TSTableView/Pods-TSTableView.release.xcconfig"; sourceTree = "<group>"; };
+		CB8872CD38E8937ACDDBD6AD /* libPods-TSTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6871C3F1ECC329C003928D9 /* TSTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6871C431ECC329C003928D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6871C451ECC329C003928D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027BCFE2E818BF3B4184EAEE /* libPods-TSTableView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34E13E4AF54026BA4FF8CEB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D7FF4E3EC499E7B811605D9 /* Pods-TSTableView.debug.xcconfig */,
+				763E37928D4E3E0D96C281F6 /* Pods-TSTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9A4EE46BA189D89934AF81A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB8872CD38E8937ACDDBD6AD /* libPods-TSTableView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6871C361ECC329C003928D9 = {
 			isa = PBXGroup;
 			children = (
 				F6871C411ECC329C003928D9 /* TSTableView */,
 				F6871C401ECC329C003928D9 /* Products */,
+				34E13E4AF54026BA4FF8CEB3 /* Pods */,
+				A9A4EE46BA189D89934AF81A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6871C561ECC329C003928D9 /* Build configuration list for PBXNativeTarget "TSTableView" */;
 			buildPhases = (
+				AAE7CBCE8F82B19F36DDF043 /* [CP] Check Pods Manifest.lock */,
 				F6871C3B1ECC329C003928D9 /* Sources */,
 				F6871C3C1ECC329C003928D9 /* Frameworks */,
 				F6871C3D1ECC329C003928D9 /* Resources */,
+				EB237B2622451B2CEDC17948 /* [CP] Embed Pods Frameworks */,
+				2BB1D0B6C6200AC564507D61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BB1D0B6C6200AC564507D61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSTableView/Pods-TSTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAE7CBCE8F82B19F36DDF043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB237B2622451B2CEDC17948 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSTableView/Pods-TSTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6871C3B1ECC329C003928D9 /* Sources */ = {
@@ -267,6 +342,7 @@
 		};
 		F6871C571ECC329C003928D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D7FF4E3EC499E7B811605D9 /* Pods-TSTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RJ9H5X8SFM;
@@ -280,6 +356,7 @@
 		};
 		F6871C581ECC329C003928D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 763E37928D4E3E0D96C281F6 /* Pods-TSTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RJ9H5X8SFM;
