@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
 
-#import "TSTableViewController+TestDataDefinition.h"
+#import "ViewController+TestDataDefinition.h"
 #import "TSTableViewModel.h"
 
-@implementation TSTableViewController (TestDataDefinition)
+@implementation ViewController (TestDataDefinition)
 
 #pragma mark - Data set 1
 

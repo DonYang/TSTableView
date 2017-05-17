@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
 
-#import "TSTableViewController.h"
+#import "ViewController.h"
 #import "TSTableViewModel.h"
 #import "TSDefines.h"
-#import "TSTableViewController+TestDataDefinition.h"
+#import "ViewController+TestDataDefinition.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface TSTableViewController () <TSTableViewDelegate>
+@interface ViewController () <TSTableViewDelegate>
 {
     TSTableView *_tableView1;
     TSTableView *_tableView2;
@@ -28,12 +28,12 @@
 
 @end
 
-@implementation TSTableViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     self.settingsView.layer.cornerRadius = 4;
     self.settingsView.layer.shadowOpacity = 0.5;
@@ -50,9 +50,9 @@
     NSArray *rows1 = [self rowsInfo1];
     [_model1 setColumns:columns1 andRows:rows1];
     
-//    NSArray *columns1 = [self columnsForFileSystemTree];
-//    NSArray *rows1 = [self rowsForAppDirectory];
-//    [_model1 setColumns:columns1 andRows:rows1];
+    //    NSArray *columns1 = [self columnsForFileSystemTree];
+    //    NSArray *rows1 = [self rowsForAppDirectory];
+    //    [_model1 setColumns:columns1 andRows:rows1];
     
     _rowExamples = @[
                      [self rowExample1],
@@ -62,7 +62,7 @@
     
 }
 
-#pragma mark - 
+#pragma mark -
 
 - (IBAction)numberOfRowsValueChanged:(UIStepper *)stepper
 {
@@ -75,7 +75,7 @@
             TSTableViewModel *model = _dataModels[i];
             NSIndexPath *rowPath = [table pathToSelectedRow];
             if(!rowPath)
-                rowPath = [NSIndexPath indexPathWithIndex:0];
+            rowPath = [NSIndexPath indexPathWithIndex:0];
             
             TSRow *row = _rowExamples[i];
             [model insertRow:row atPath:rowPath];
@@ -89,7 +89,7 @@
             TSTableViewModel *model = _dataModels[i];
             NSIndexPath *rowPath = [table pathToSelectedRow];
             if(rowPath)
-                [model removeRowAtPath:rowPath];
+            [model removeRowAtPath:rowPath];
             
         }
     }
@@ -165,10 +165,10 @@
     NSArray *columns = @[
                          [TSColumn columnWithDictionary:@{ @"title" : @"Filename", @"subtitle" : @"Files in Application directory", @"minWidth" : @128, @"defWidth" : @288 }],
                          [TSColumn columnWithDictionary:@{ @"title" : @"Attributes", @"subcolumns" : @[
-                          @{ @"title" : @"File size", @"titleFontSize" : @12, @"titleColor" : @"FF006F00", @"headerHeight" : @24, @"defWidth" : @64},
-                                     @{ @"title" : @"Modification date", @"titleFontSize" : @12, @"headerHeight" : @24, @"defWidth" : @200},
-                                     @{ @"title" : @"Creation date", @"titleFontSize" : @12, @"headerHeight" : @24, @"defWidth" : @200}
-                          ]}
+                                                                   @{ @"title" : @"File size", @"titleFontSize" : @12, @"titleColor" : @"FF006F00", @"headerHeight" : @24, @"defWidth" : @64},
+                                                                   @{ @"title" : @"Modification date", @"titleFontSize" : @12, @"headerHeight" : @24, @"defWidth" : @200},
+                                                                   @{ @"title" : @"Creation date", @"titleFontSize" : @12, @"headerHeight" : @24, @"defWidth" : @200}
+                                                                   ]}
                           ]
                          ];
     return columns;
@@ -178,7 +178,7 @@
 {
     NSArray *dirs = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     if(!dirs || dirs.count ==0)
-        return nil;
+    return nil;
     
     NSURL *rootUrl = [dirs lastObject];
     
@@ -189,14 +189,14 @@
 {
     NSError *error = nil;
     NSArray *properties = @[
-        NSURLLocalizedNameKey,
-        NSURLCreationDateKey,
-        NSURLContentModificationDateKey,
-        NSURLIsSymbolicLinkKey,
-        NSURLIsDirectoryKey,
-        NSURLIsHiddenKey,
-        NSURLFileSizeKey
-    ];
+                            NSURLLocalizedNameKey,
+                            NSURLCreationDateKey,
+                            NSURLContentModificationDateKey,
+                            NSURLIsSymbolicLinkKey,
+                            NSURLIsDirectoryKey,
+                            NSURLIsHiddenKey,
+                            NSURLFileSizeKey
+                            ];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"HH:MM  dd-MMM-YYYY"];
@@ -247,29 +247,29 @@
         {
             cellFilename.icon = [UIImage imageNamed:@"TableViewPackageIcon"];
         }
-
+        
         NSNumber *fileSize = nil;
         [url getResourceValue:&fileSize forKey:NSURLFileSizeKey error:NULL];
         NSString *fileSizeStr = @"";
         if(fileSize)
-            fileSizeStr = [NSString stringWithFormat:@"%.2f kb",[fileSize floatValue]/1024];
+        fileSizeStr = [NSString stringWithFormat:@"%.2f kb",[fileSize floatValue]/1024];
         
         NSDate *creationDate = nil;
         [url getResourceValue:&creationDate forKey:NSURLCreationDateKey error:NULL];
         
         NSDate *modificationDate = nil;
         [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:NULL];
-
+        
         TSRow *row = [TSRow rowWithDictionary:@{
-                      @"cells" : @[
-                              cellFilename,
-                              @{@"value" : fileSizeStr},
-                              @{@"value" : [dateFormatter stringFromDate:modificationDate]},
-                              @{@"value" : [dateFormatter stringFromDate:creationDate]}
-                              
-                      ],
-                      @"subrows" : subrows
-         }];
+                                                @"cells" : @[
+                                                        cellFilename,
+                                                        @{@"value" : fileSizeStr},
+                                                        @{@"value" : [dateFormatter stringFromDate:modificationDate]},
+                                                        @{@"value" : [dateFormatter stringFromDate:creationDate]}
+                                                        
+                                                        ],
+                                                @"subrows" : subrows
+                                                }];
         [rows addObject:row];
     }
     return [NSArray arrayWithArray:rows];
@@ -278,15 +278,15 @@
 - (TSRow *)rowForDummyFile
 {
     TSRow *row = [TSRow rowWithDictionary:@{
-                  @"cells" : @[
-                  @{@"value" : @"New File"},
-                  @{@"value" : @"-"},
-                  @{@"value" : @"-"},
-                  @{@"value" : @"-"}
-                  ],
-                }];
+                                            @"cells" : @[
+                                                    @{@"value" : @"New File"},
+                                                    @{@"value" : @"-"},
+                                                    @{@"value" : @"-"},
+                                                    @{@"value" : @"-"}
+                                                    ],
+                                            }];
     return row;
-
+    
 }
 
 
