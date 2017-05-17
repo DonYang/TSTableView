@@ -27,6 +27,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class TSTableViewCell;
+
+@class TSTableViewHeaderSectionView;
+
 /**
     @abstract TSTableViewAppearanceCoordinator is internal protocol for configuring TSTableView appearance. It's implemented by TSTableView.
  */
