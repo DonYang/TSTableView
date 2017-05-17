@@ -186,6 +186,11 @@
     VerboseLog();
 }
 
+- (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex
+{
+    
+}
+
 #pragma mark - FileSystem
 
 - (NSArray *)columnsForFileSystemTree

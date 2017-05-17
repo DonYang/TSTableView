@@ -245,7 +245,7 @@
     // change position of rows that are follow modified row
     CGFloat delta = subRow.frame.size.height - prevHeight;
     [TSUtils performViewAnimationBlock:^{
-        for(int i = subRowIndex + 1; i < subrows.count; ++i)
+        for(NSInteger i = subRowIndex + 1; i < subrows.count; ++i)
         {
             TSTableViewExpandSection *row = subrows[i];
             CGRect rect = row.frame;
@@ -456,7 +456,7 @@
 
     //Update indexPathes for expand buttons following after removed item
     NSIndexPath *basePath = [path indexPathByRemovingLastIndex];
-    for(int i = lastIndex; i < rows.count; ++i)
+    for(NSInteger i = lastIndex; i < rows.count; ++i)
     {
         row = rows[i];
         row.rowPath = [basePath indexPathByAddingIndex:i];
@@ -493,7 +493,7 @@
     
     //Update indexPathes for expand buttons following after removed item
     NSIndexPath *basePath = [path indexPathByRemovingLastIndex];
-    for(int i = lastIndex; i < rows.count; ++i)
+    for(NSInteger i = lastIndex; i < rows.count; ++i)
     {
         row = rows[i];
         row.rowPath = [basePath indexPathByAddingIndex:i];

@@ -729,7 +729,7 @@
     {
         CGFloat color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
         CGColorRef colorRef = columnInfo.color.CGColor;
-        const float *rgb = CGColorGetComponents(colorRef);
+        const CGFloat *rgb = CGColorGetComponents(colorRef);
         cell.backgroundImageView.image = [self cellBackgroundImageWithTintColor:[UIColor colorWithRed:color * rgb[0]  green:color * rgb[1] blue:color * rgb[2] alpha:1]];
     }
     else

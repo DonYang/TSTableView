@@ -509,7 +509,7 @@
             row.frame = rect;
             if(row.rowView)
             {
-                for(int i = columnIndex; i < row.rowView.cells.count;  ++i)
+                for(NSInteger i = columnIndex; i < row.rowView.cells.count;  ++i)
                 {
                     TSTableViewCell *cell = row.rowView.cells[i];
                     CGRect rect = cell.frame;

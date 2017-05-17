@@ -98,7 +98,7 @@
 
 - (void)setLineNumber:(NSInteger)lineNumber
 {
-    self.lineLabel.text = [NSString stringWithFormat:@"%d", lineNumber];
+    self.lineLabel.text = [NSString stringWithFormat:@"%ld", (long)lineNumber];
     
     [self updateLineLabelLayout];
 }
