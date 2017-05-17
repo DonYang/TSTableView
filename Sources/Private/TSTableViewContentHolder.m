@@ -153,7 +153,7 @@
 - (void)initialize
 {
     VerboseLog();
-    self.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+//    self.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     self.delaysContentTouches = YES;
     self.canCancelContentTouches = YES;
     self.alwaysBounceVertical = YES;
@@ -559,7 +559,7 @@
     
     // change position of rows that are follow modified row
     CGFloat delta = subRow.frame.size.height - prevHeight;
-    for(int i = subRowIndex + 1; i < subrows.count;  ++i)
+    for(NSInteger i = subRowIndex + 1; i < subrows.count;  ++i)
     {
         TSTableViewRowProxy *row = subrows[i];
         CGRect rect = row.frame;
