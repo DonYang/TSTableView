@@ -720,6 +720,7 @@
         cell.detailsLabel.textAlignment = cellInfo.textAlignment;
         if(cellInfo.detailsColor)
             cell.detailsLabel.textColor = cellInfo.detailsColor;
+        [cell.textLabel sizeToFit];
     }
     if(cellInfo.icon)
         cell.iconView.image = cellInfo.icon;

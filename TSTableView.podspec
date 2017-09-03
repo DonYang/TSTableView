@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "TSTableView"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "TSTableView is a grid view to show data like excel."
   s.description  = <<-DESC
                    TSTableView is a grid view to show data like excel.
